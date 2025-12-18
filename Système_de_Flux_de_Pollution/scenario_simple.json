@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "Source Usine",
+      "type": "source",
+      "supply": 100,
+      "x": 1,
+      "y": 2
+    },
+    {
+      "id": 1,
+      "name": "Station 1",
+      "type": "intermediate",
+      "supply": 0,
+      "x": 3,
+      "y": 1
+    },
+    {
+      "id": 2,
+      "name": "Station 2",
+      "type": "intermediate",
+      "supply": 0,
+      "x": 3,
+      "y": 3
+    },
+    {
+      "id": 3,
+      "name": "Traitement",
+      "type": "sink",
+      "supply": -100,
+      "x": 5,
+      "y": 2
+    }
+  ],
+  "arcs": [
+    {
+      "from": 0,
+      "to": 1,
+      "cost": 2.0,
+      "capacity": 60.0
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "cost": 3.0,
+      "capacity": 50.0
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "cost": 1.0,
+      "capacity": 70.0
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "cost": 2.0,
+      "capacity": 60.0
+    }
+  ]
+}
