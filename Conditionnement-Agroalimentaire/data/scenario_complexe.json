@@ -1,0 +1,129 @@
+{
+  "nom_scenario": "Ligne de Conditionnement Complexe - Produits Laitiers",
+  "description": "Conditionnement multi-produits avec contraintes de compatibilité et ergonomie",
+  "taches": [
+    {
+      "id": 1,
+      "nom": "Réception contenants",
+      "duree": 12,
+      "prerequis": [],
+      "penibilite": 2,
+      "type_produit": "neutre"
+    },
+    {
+      "id": 2,
+      "nom": "Nettoyage UV",
+      "duree": 8,
+      "prerequis": [1],
+      "penibilite": 1,
+      "type_produit": "neutre"
+    },
+    {
+      "id": 3,
+      "nom": "Remplissage yaourt nature",
+      "duree": 20,
+      "prerequis": [2],
+      "penibilite": 3,
+      "type_produit": "yaourt"
+    },
+    {
+      "id": 4,
+      "nom": "Remplissage yaourt fruits",
+      "duree": 25,
+      "prerequis": [2],
+      "penibilite": 3,
+      "type_produit": "yaourt"
+    },
+    {
+      "id": 5,
+      "nom": "Ajout ferments",
+      "duree": 15,
+      "prerequis": [3, 4],
+      "penibilite": 2,
+      "type_produit": "yaourt"
+    },
+    {
+      "id": 6,
+      "nom": "Thermoscellage",
+      "duree": 18,
+      "prerequis": [5],
+      "penibilite": 4,
+      "type_produit": "neutre"
+    },
+    {
+      "id": 7,
+      "nom": "Refroidissement",
+      "duree": 30,
+      "prerequis": [6],
+      "penibilite": 1,
+      "type_produit": "neutre"
+    },
+    {
+      "id": 8,
+      "nom": "Étiquetage automatique",
+      "duree": 10,
+      "prerequis": [7],
+      "penibilite": 1,
+      "type_produit": "neutre"
+    },
+    {
+      "id": 9,
+      "nom": "Contrôle poids",
+      "duree": 8,
+      "prerequis": [8],
+      "penibilite": 2,
+      "type_produit": "neutre"
+    },
+    {
+      "id": 10,
+      "nom": "Contrôle visuel",
+      "duree": 12,
+      "prerequis": [9],
+      "penibilite": 3,
+      "type_produit": "neutre"
+    },
+    {
+      "id": 11,
+      "nom": "Emballage groupé",
+      "duree": 22,
+      "prerequis": [10],
+      "penibilite": 3,
+      "type_produit": "neutre"
+    },
+    {
+      "id": 12,
+      "nom": "Mise en carton",
+      "duree": 16,
+      "prerequis": [11],
+      "penibilite": 4,
+      "type_produit": "neutre"
+    },
+    {
+      "id": 13,
+      "nom": "Palettisation",
+      "duree": 25,
+      "prerequis": [12],
+      "penibilite": 5,
+      "type_produit": "neutre"
+    },
+    {
+      "id": 14,
+      "nom": "Film étirable palette",
+      "duree": 14,
+      "prerequis": [13],
+      "penibilite": 3,
+      "type_produit": "neutre"
+    }
+  ],
+  "nombre_postes": 6,
+  "temps_cycle_max": 60,
+  "contraintes_ergonomie": {
+    "penibilite_max_par_poste": 12,
+    "taches_incompatibles": [[3, 4], [6, 7]]
+  },
+  "objectifs_multiples": {
+    "poids_temps_cycle": 0.6,
+    "poids_equilibrage": 0.25,
+    "poids_ergonomie": 0.15
+  }
+}

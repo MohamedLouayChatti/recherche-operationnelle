@@ -1,0 +1,50 @@
+{
+  "nom_scenario": "Ligne de Conditionnement Simple - Yaourts",
+  "description": "Conditionnement de yaourts avec 4 postes de travail",
+  "taches": [
+    {
+      "id": 1,
+      "nom": "Réception pots",
+      "duree": 15,
+      "prerequis": []
+    },
+    {
+      "id": 2,
+      "nom": "Remplissage yaourt",
+      "duree": 25,
+      "prerequis": [1]
+    },
+    {
+      "id": 3,
+      "nom": "Pose couvercle",
+      "duree": 10,
+      "prerequis": [2]
+    },
+    {
+      "id": 4,
+      "nom": "Étiquetage",
+      "duree": 12,
+      "prerequis": [3]
+    },
+    {
+      "id": 5,
+      "nom": "Contrôle qualité",
+      "duree": 8,
+      "prerequis": [4]
+    },
+    {
+      "id": 6,
+      "nom": "Emballage carton",
+      "duree": 18,
+      "prerequis": [5]
+    },
+    {
+      "id": 7,
+      "nom": "Palettisation",
+      "duree": 20,
+      "prerequis": [6]
+    }
+  ],
+  "nombre_postes": 4,
+  "temps_cycle_max": 50
+}
